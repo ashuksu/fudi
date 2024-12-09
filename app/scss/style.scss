@@ -1,0 +1,649 @@
+@import "fonts";
+@import "vars";
+@import "global";
+
+// ! ----------start header------------------------------
+
+.header {
+  width: 100%;
+  min-height: 880px;
+  background-image: url(../images/header-bg.jpg);
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header-top {
+  &__inner {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-left: -30px;
+    height: 100px;
+    overflow: hidden;
+  }
+
+  &__link,
+  .menu__btn {
+    @include f700;
+    line-height: 30px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 40px rgba(1, 1, 1, 0.55);
+
+    &:hover {
+      transition: all 0.3s;
+      text-shadow: 0px 1px 40px rgba($tomato, 0.6);
+      color: rgba($tomato, 0.95);
+    }
+  }
+
+  &__link {
+    margin-right: 30px;
+  }
+
+  &__menu {
+    display: inline-block;
+  }
+}
+
+// * -----------menu start-------------------------------------
+
+.menu {
+  position: relative;
+
+  &:hover {
+    .menu__list {
+      min-height: 68px;
+      border: 3px solid #fff;
+      padding: 10px 0px;
+      overflow: visible;
+      transition: all 0.3s;
+    }
+
+    .menu__list-link {
+      line-height: 30px;
+      transition: all 0.3s;
+    }
+
+    .menu__btn {
+      transform: rotate(180deg);
+
+      div {
+        background-color: rgba($tomato, 0.95);
+      }
+    }
+  }
+
+  &__btn {
+    padding: 20px;
+    padding-left: 25px;
+    margin-bottom: -20px;
+    margin-left: -25px;
+    margin-right: -20px;
+
+    &:hover {
+      cursor: pointer;
+
+      div {
+        background-color: rgba($tomato, 0.95);
+      }
+    }
+
+    div {
+      width: 14px;
+      height: 2px;
+      background-color: #fff;
+
+      & + div {
+        margin-top: 2px;
+      }
+    }
+  }
+}
+
+.menu__list {
+  min-width: 280px;
+  width: 100%;
+  min-height: 0px;
+  border: 3px solid transparent;
+  border-top: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+  border-radius: 3px;
+  padding: 0px;
+  text-align: center;
+  background-image: url(../images/shadow-bg.png);
+  background-repeat: repeat-x;
+  background-position: bottom;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  z-index: 40;
+  overflow: hidden;
+
+  &-link {
+    display: block;
+    padding: 0 15px;
+    @include f700;
+    line-height: 0px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 40px rgba(1, 1, 1, 0.55);
+
+    &:hover {
+      transition: all 0.3s;
+      text-shadow: 0px 1px 40px rgba($tomato, 0.6);
+      color: rgba($tomato, 0.95);
+    }
+  }
+}
+
+// * -----------menu end-------------------------------------
+
+.header-content {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-image: url(../images/shadow-bg.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+  }
+}
+
+.header-content__inner {
+  width: 100%;
+  min-height: 780px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 0 100px;
+
+  &-title {
+    @include f700;
+    font-size: 100px;
+    line-height: 100px;
+    font-style: normal;
+    margin-bottom: 30px;
+    text-shadow: 0px 1px 40px rgba(1, 1, 1, 0.55);
+    text-align: center;
+
+    span {
+      display: block;
+      font-family: "TimesNewRomanPS-BoldItalicMT", serif;
+      font-style: italic;
+      font-size: 36px;
+      line-height: 40px;
+      text-align: center;
+      margin-right: -35px;
+      margin-bottom: 5px;
+      text-shadow: 0px 1px 40px rgba(1, 1, 1, 0.55);
+      color: rgba(#fff, 0.7);
+    }
+  }
+
+  &-btn {
+    display: block;
+    max-width: 280px;
+    width: 100%;
+    min-height: 68px;
+    border: 3px solid #fff;
+    border-radius: 3px;
+    padding: 20px 15px;
+    text-align: center;
+    @include f700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+    margin-bottom: 36px;
+
+    &:hover {
+      transition: all 0.3s;
+      text-shadow: 0px 1px 40px rgba($tomato, 0.6);
+      color: rgba($tomato, 0.95);
+      box-shadow: 0px 1px 40px rgba($tomato, 0.6);
+    }
+  }
+
+  &-text {
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    @include f400;
+    text-shadow: 0px 1px 40px rgba(1, 1, 1, 0.55);
+    padding: 0 100px;
+  }
+
+  &-link {
+    @include f700;
+    text-decoration: underline;
+    color: #fff;
+
+    &:hover {
+      transition: all 0.3s;
+      text-shadow: 0px 1px 40px rgba($tomato, 0.6);
+      color: rgba($tomato, 0.95);
+    }
+  }
+}
+
+// ! ----------end header--------------------------------
+
+// ! ----------start get---------------------------------
+
+.get {
+  background-color: #fff;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+  }
+
+  &__item {
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+
+    & + .get__item {
+      margin-left: 50px;
+    }
+  }
+
+  &__icon {
+    height: 108px;
+    width: 108px;
+    border-radius: 50%;
+    border: 2px solid #221f1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+}
+
+.get__title,
+.app__title,
+.cuisine__title {
+  color: #000;
+  @include f700;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid $tomato;
+    width: 88px;
+    height: 0;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+// ! ----------end get-----------------------------------
+
+// ! ----------start app---------------------------------
+
+.app {
+  background-color: #f7f7f7;
+
+  &__inner {
+    padding-top: 102px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // &__img {
+  //   margin-left: -25px;
+  //   margin-right: 25px;
+  //   height: 778px;
+  //   overflow-y: hidden;
+  //   flex: 1 1 auto;
+  // }
+
+  &__img {
+    margin-left: -25px;
+    margin-right: 25px;
+    background-image: url(../images/iphone5s.png);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 547px;
+    width: 100%;
+    min-height: 778px;
+    flex: 1 0 auto;
+  }
+
+  &__article {
+    // flex: 0 1 auto;
+    max-width: 540px;
+    width: 100%;
+    padding: 75px 0;
+  }
+
+  &__title {
+    margin-bottom: 17px;
+
+    &::after {
+      left: 0;
+      transform: translateX(0%);
+    }
+  }
+
+  &__text {
+    margin-bottom: 22px;
+    text-align: justify;
+  }
+
+  &__link {
+    margin-right: 10px;
+  }
+}
+
+// ! ----------end app-----------------------------------
+
+// ! ----------start feedback----------------------------
+
+.feedback {
+  background: #4a3949;
+  border-bottom: 1px solid #d6d2d6;
+
+  &__slider {
+    background-image: url(../images/feedback-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 80px;
+    background-attachment: fixed;
+
+    &:hover .feedback__message {
+      color: #fff;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    padding-top: 80px;
+  }
+
+  &__img {
+    width: 113px;
+    height: 113px;
+    border: 5px solid #948b94;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__message {
+    color: #7a6e7a;
+    padding: 0 60px;
+    transition: all 0.5s;
+    line-height: 36px;
+  }
+
+  &__text {
+    font-size: 30px;
+    font-family: "Lato-Hairline", sans-serif;
+    font-weight: 400;
+    margin-bottom: 12px;
+
+    &::before {
+      content: "\201C";
+    }
+
+    &::after {
+      content: "\201D";
+    }
+  }
+
+  &__user-info {
+    font-size: 18px;
+    font-family: "Lato-HairlineItalic", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 20px;
+
+    &::before,
+    &::after {
+      content: "\A0\2013\A0";
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: -6px;
+
+    li + li {
+      margin-left: 10px;
+    }
+
+    button {
+      display: block;
+      border: 0px;
+      outline: 0px;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      padding: 0;
+      background-color: #fff;
+      font-size: 0;
+      line-height: 0px;
+      color: transparent;
+      opacity: 0.2;
+
+      &:focus {
+        border: 0px;
+        outline: 0px;
+      }
+    }
+  }
+  .slick-active button {
+    transition: all 0.5s;
+    opacity: 1;
+  }
+}
+
+// ! ----------end feedback-----------------------------
+
+// ! ----------start cuisine----------------------------
+
+.cuisine {
+  background-color: #fff;
+  padding-top: 100px;
+
+  &__wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+.cuisine__item {
+  flex-basis: 20%;
+  min-height: 225px;
+  background-color: $tomato;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &-link {
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.8s;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      opacity: 0;
+      background-image: url(../images/shadow-bg.png);
+      background-repeat: repeat-x;
+      background-size: contain;
+      background-position: bottom;
+      z-index: 20;
+    }
+
+    &:hover::after {
+      transition: all 0.5s;
+      opacity: 1;
+    }
+
+    &:hover .cuisine__item-current,
+    &:hover .cuisine__item-title {
+      transition: all 0.3s;
+      text-shadow: 0px 1px 40px rgba($tomato, 0.7);
+    }
+  }
+
+  &-info {
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    text-align: center;
+    z-index: 30;
+  }
+
+  &-current {
+    position: absolute;
+    width: 100%;
+    top: -25px;
+    font-family: "TimesNewRomanPS-BoldItalicMT", serif;
+    font-style: italic;
+    font-size: 16px;
+    color: rgba(#fff, 0.9);
+    text-shadow: 0px 1px 40px rgba(1, 1, 1, 0.55);
+  }
+
+  &-title {
+    @include f700;
+    font-size: 36px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0px 1px 40px rgba(1, 1, 1, 0.55);
+  }
+}
+
+// ! ----------end cuisine-----------------------------
+
+// ! ----------start report----------------------------
+
+.report {
+  background-color: #fff;
+
+  &__inner {
+    min-height: 175px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    text-align: center;
+
+    & + .report__item {
+      margin-left: 20px;
+    }
+  }
+
+  &__number {
+    @include f700;
+    font-size: 36px;
+    line-height: 40px;
+    color: #000;
+    margin-bottom: 3px;
+  }
+}
+
+// ! ----------end report-----------------------------
+
+// ! ----------start footer----------------------------
+
+.footer {
+  background-color: #f7f7f7;
+  border-top: 1px solid #e2e2e2;
+
+  &__inner {
+    min-height: 92px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  &__copy {
+    color: rgba(#8b8b8b, 0.5);
+    margin-right: 20px;
+  }
+
+  &__info {
+    color: #8b8b8b;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    @include f400;
+    color: #000;
+
+    &:hover {
+      transition: all 0.3s;
+      text-shadow: 0px 1px 40px rgba($tomato, 0.6);
+      color: rgba($tomato, 0.95);
+    }
+  }
+}
+
+// ! ----------end footer-----------------------------
+
+// * -------------------------------------------------
+
+@import "media";

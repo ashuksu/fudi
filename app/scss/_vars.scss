@@ -1,0 +1,26 @@
+$tomato: #f57365;
+
+// * ------------------------------------------------------
+
+@for $i from 1 through 10 {
+  .cuisine__item:nth-child(#{$i}) {
+    animation-delay: random(5) / 10 + s;
+  }
+}
+
+// * ----------------------------------------------------------
+
+@mixin f300 {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+
+@mixin f400 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+@mixin f700 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
