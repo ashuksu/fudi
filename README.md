@@ -1,4 +1,3 @@
-# FUDI
-Fudi, project for my portfolio
+# [FUDI](https://ashuksu.github.io/fudi/app)
 
-https://Ashuksu.github.io/fudi/app
+![FUDI](https://raw.githubusercontent.com/ashuksu/fudi/refs/heads/main/%23source/fudi.jpg)
